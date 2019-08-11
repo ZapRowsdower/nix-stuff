@@ -1,0 +1,20 @@
+{
+  "name": "nix-stuff",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Learning unix/linux/posix stuff",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZapRowsdower/nix-stuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/ZapRowsdower/nix-stuff/issues"
+  },
+  "homepage": "https://github.com/ZapRowsdower/nix-stuff#readme"
+}
