@@ -44,7 +44,7 @@ cat hello.txt world.txt > helloworld.txt # creates new file 'helloworld.txt' wit
 
 ## Utilities
 * `wc` (print newline, word, and byte counts for each file)
-* `diff` (compare files line by line.  It only shows altered lines, abbreviating changed as c, deleted as d and added as a.)
+* `diff` (compare files line by line.  It only shows altered lines, abbreviating changed as c, deleted as d and added as a.) [MORE](https://www.computerhope.com/unix/udiff.htm)
 * `grep` (searches text matching a specified pattern. By default it looks at standard input, but you can specify files to be searched. A pattern can be a normal string or a regular expression. It can print out matching or non-matching lines, and their context. Every time you run a command which spews a lot of information you don’t need, pipe it into grep and let it do its magic)
 * `head` / `tail` (head: output the first part of files. tail: output the last part of files)
 * `whereis` (locate the binary, source, and manual page files for a command)
