@@ -1,4 +1,6 @@
 #!/bin/bash
+# Ensure our working directory is the same as the bash script's location
+cd "$(dirname "$0")" &&
 # cat Example:
 # Create 2 files 'hello' and 'world'. hello.txt contains 'hello'. world.txt contains 'world'
 cd ../dump &&
