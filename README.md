@@ -33,17 +33,8 @@ Learning unix/linux/posix stuff
     * `fold -s longtext.txt | grep M87`
 * `find` (Search filesystem for files and directories) [TLDR](https://tldr.ostera.io/find) & [MORE](http://www.grymoire.com/Unix/Find.html)
     * `find . -print` (Print the names of all of the files in the directory and all subdirectories)
-* `cat` (If given a single file, prints its contents to the standard output. If you give it more than one file, it will concatenate them, and you can then redirect the output into a new file.) [TLDR](https://tldr.ostera.io/cat)
+* `cat` (If given a single file, prints its contents to the standard output. If you give it more than one file, it will concatenate them, and you can then redirect the output into a new file.) [TLDR](https://tldr.ostera.io/cat), [EXAMPLE SCRIPT](./scripts/cat-example.sh)
 
-```bash
-# cat Example:
-# Create 2 files 'hello' and 'world'. hello.txt contains 'hello'. world.txt contains 'world'
-echo "hello" > hello.txt; echo "world" > world.txt
-cat hello.txt # prints 'hello'
-cat world.txt # prints 'world'
-cat hello.txt world.txt # prints 'hello' & prints 'world'
-cat hello.txt world.txt > helloworld.txt # creates new file 'helloworld.txt' with the contents 'hello world'
-```
 
 ## Utilities
 * `wc` (print newline, word, and byte counts for each file)
