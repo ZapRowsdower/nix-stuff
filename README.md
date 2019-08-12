@@ -38,6 +38,8 @@ Learning unix/linux/posix stuff
 
 ## Utilities
 * `curl` (Transfers data from or to a server via a URL) [TLDR](https://tldr.ostera.io/curl), [EXAMPLE SCRIPT](./scripts/search-web-page.sh)
+   * `curl -O [url/to/some/file.ext]` (download file maintaining the exact file name)
+   * `curl -u user:pass -O ftp://remote_url/file-to-download.zip` (pass authentication details)
 * `wc` (print newline, word, and byte counts for each file)
 * `diff` (compare files line by line.  It only shows altered lines, abbreviating changed as c, deleted as d and added as a.) [TLDR](https://tldr.ostera.io/diff) & [MORE](https://www.computerhope.com/unix/udiff.htm)
 * `grep` (searches text matching a specified pattern. By default it looks at standard input, but you can specify files to be searched. A pattern can be a normal string or a regular expression. It can print out matching or non-matching lines, and their context. Every time you run a command which spews a lot of information you don’t need, pipe it into grep and let it do its magic) [TLDR](https://tldr.ostera.io/grep)
