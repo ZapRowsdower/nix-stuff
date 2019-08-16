@@ -79,6 +79,10 @@ Learning unix/linux/posix stuff
 * `df` (report file system disk space usage)
 * `which` (locate a program/command in the user's path)
     * `which node` - prints /usr/bin/node
+    
+## Bash Scripts
+Change directory to current script location
+cd "$(dirname "$0")"
 
 ## General Concepts
 ### User Accounts
