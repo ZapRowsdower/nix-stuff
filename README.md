@@ -81,8 +81,9 @@ Learning unix/linux/posix stuff
     * `which node` - prints /usr/bin/node
     
 ## Bash Scripts
-Change directory to current script location
-cd "$(dirname "$0")"
+Change directory to current script location:
+
+`cd "$(dirname "$0")"`
 
 ## General Concepts
 ### User Accounts
