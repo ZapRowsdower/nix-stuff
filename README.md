@@ -1,7 +1,7 @@
 # nix-stuff
 Learning unix/linux/posix stuff
 
-#Test
+# Test
 
 ## Useful links
 * [LINUX BASICS IN 3 MINS : $PATH ENVIRONMENT VARIABLE](https://www.youtube.com/watch?v=abN6bvyPRxQ)
