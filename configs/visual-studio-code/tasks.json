@@ -24,6 +24,12 @@
             "command": "echo Test",
             "label": "Some New Task",
             "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "command": "echo Test2,
+            "label": "Some New Task 2
+            "problemMatcher": []
         }
     ],
     "inputs": [
