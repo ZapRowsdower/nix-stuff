@@ -116,9 +116,22 @@ Change directory to current script location:
 
 `cd "$(dirname "$0")"`
 
+
 ### Bash Scripting
 http://mywiki.wooledge.org/BashFAQ
 http://mywiki.wooledge.org/BashPitfalls
+
+Create a function which accepts two parameters:
+```bash
+function helloworld() {
+    # $1 and $2 are parameters which are passed in via the terminal invocation of this fn.
+    # e.g. helloworld hello world -> prints hello world
+    echo "$1 $2"
+}
+```
+Then invoke the function and pass arguments like so:
+
+`$ helloworld hello world`
 
 ## General Concepts
 ### User Accounts
