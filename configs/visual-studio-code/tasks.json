@@ -27,7 +27,7 @@
         },
         {
             "type": "shell",
-            "command": "echo Test2,
+            "command": "echo Test2",
             "label": "Some New Task 2",
             "problemMatcher": []
         }
