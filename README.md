@@ -77,13 +77,48 @@ Learning unix/linux/posix stuff
 * `top` or `htop` (System Montior/Task Manager.)
     * `htop` is usually a separate download but is much better than top (available in Windows Subsystem Linux but not Mac)
 * `df` (report file system disk space usage)
+* `du` Disk usage: estimate and summarize file and directory space usage. [TLDR](https://tldr.ostera.io/du)
 * `which` (locate a program/command in the user's path)
     * `which node` - prints /usr/bin/node
     
-## Bash Scripts
+## Shells
+On many *NIX OSes there is no GUI (for performance/size reasons) so your main interaction with the OS is via shells and scripts. *NIX systems have a variety of shells (for example: sh, zsh, ksh, and **bash**). See this [Wikipedia page for more details](https://en.wikipedia.org/wiki/Unix_shell). Bash appears to be the most ubiqutous shell to work with at this time as its available on Mac and PC (via Git Bash for Windows/Cygwin)
+
+Shells have different modes: Interactive, Non-interactive, Login, Non-login.
+
+**Interactive**: As the term implies: Interactive means that the commands are run with user-interaction from keyboard. E.g. the shell can prompt the user to enter input.
+
+**Non-interactive**: the shell is probably run from an automated process so it can't assume if can request input or that someone will see the output. E.g Maybe it is best to write output to a log-file.
+
+**Login**: Means that the shell is run as part of the login of the user to the system. Typically used to do any configuration that a user needs/wants to establish his work-environment.
+
+**Non-login**: Any other shell run by the user after logging on, or which is run by any automated process which is not coupled to a logged in user.
+
+**Login vs Non-login shells:**
+* https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell
+* "Not a login shell" means things like script launches and usually terminal windows started by window managers.
+* "A login shell is one whose first character of argument zero is a -, or one started with the --login option."
+
+To tell if you are in a login shell:
+```bash
+$ shopt login_shell # prints: login_shell     on or off
+```
+
+### Configuration
+You can change the appearance and behavior of a given shell via a config file. Each shell has a different config file. See this table for more info: https://en.wikipedia.org/wiki/Unix_shell#Configuration_files.
+
+Here are examples of heavily modified bash shells using `.bashrc` and `.bash_profile` files:
+* http://tldp.org/LDP/abs/html/sample-bashrc.html
+
+### Scripting
+
 Change directory to current script location:
 
 `cd "$(dirname "$0")"`
+
+### Bash Scripting
+http://mywiki.wooledge.org/BashFAQ
+http://mywiki.wooledge.org/BashPitfalls
 
 ## General Concepts
 ### User Accounts
