@@ -6,8 +6,11 @@
 
 # To change user permissions on a bash file to allow it to be executable: $ chmod +x nameOfShellScript.sh
 
-# ECHO COMMAND
-#echo Hello World!
+# To change the working directory to the location/directory of the script:
+# cd "$(dirname "$0")"
+
+# PRINT SOMETHING
+# echo Hello World!
 
 # VARIABLES
 # Uppercase by convention
