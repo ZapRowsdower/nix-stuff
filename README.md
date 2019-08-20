@@ -10,6 +10,7 @@ Learning unix/linux/posix stuff
 * [LPI Linux Essentials](https://www.youtube.com/playlist?list=PLtGnc4I6s8dssa8hF4yMTAa4BrSJCSwux)
 * [http://www.grymoire.com/Unix/index.html](http://www.grymoire.com/Unix/index.html)
 * [TLDR Utility: A collection of simplified and community-driven man pages.](https://github.com/tldr-pages/tldr)
+* [Bash Manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html)
 
 ## Basic Commands
 * `ls` (list content of current directory) [TLDR](https://tldr.ostera.io/ls)
