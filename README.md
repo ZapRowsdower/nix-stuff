@@ -132,8 +132,24 @@ You can customize 3 aspects of the prompt:
    * 1: bold
    * 4: underline
 * Foreground text color. Codes range from 30-37 (8 bit simple colors)
+   * 30: Black
+   * 31: Red
+   * 32: Green
+   * 33: Yellow
+   * 34: Blue
+   * 35: Purple
+   * 36: Cyan
+   * 37: White
 * Background color. Codes range from 40-47 (8 bit simple colors)
-
+   * 40: Black
+	* 41: Red
+   * 42: Green
+	* 43: Yellow
+	* 44: Blue
+	* 45: Purple
+	* 46: Cyan
+	* 47: White
+   
 The three values (background, format, and foreground) are separated by semicolons (if no value is given the default is assumed). Also, since the value ranges are different, it does not matter which one (background, format, or foreground) you specify first.
 
 Use the `\e[` escape character at the beginning and an `m` at the end to indicate that what is between the two is a color sequence:
