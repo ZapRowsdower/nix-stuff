@@ -112,6 +112,35 @@ You can change the appearance and behavior of a given shell via a config file. E
 Here are examples of heavily modified bash shells using `.bashrc` and `.bash_profile` files:
 * http://tldp.org/LDP/abs/html/sample-bashrc.html
 
+The terminal format is stored in the `PS1` environment variable. You can see your terminal's current settings by entering the following in a terminal prompt:
+
+`$ echo $PS1`
+
+This will output something like the following:
+
+`\h:\W \u\$`
+
+According to the PROMPTING section in the man page, this is the meaning of each special character:
+* \u: the username of the current user.
+* \h: the hostname up to the first dot (.) in the Fully-Qualified Domain Name.
+* \W: the basename of the current working directory, with $HOME abbreviated with a tilde (~).
+* \$: If the current user is root, display #, $ otherwise.
+
+You can customize 3 aspects of the prompt:
+* Text Format
+   * 0: normal text
+   * 1: bold
+   * 4: underline
+* Foreground text color. Codes range from 30-37 (8 bit simple colors)
+* Background color. Codes range from 40-47 (8 bit simple colors)
+
+The three values (background, format, and foreground) are separated by semicolons (if no value is given the default is assumed). Also, since the value ranges are different, it does not matter which one (background, format, or foreground) you specify first.
+
+Use the `\e[` special character at the beginning and an m at the end to indicate that what follows is a color sequence:
+`PS1="\e[41;4;33m"` means set the background color to red, set the text format to underline, and set the foreground color to yellow.
+
+You can change the font formatting of a bash session by modifying the `PS1` environment variable, either for that session or permanently via the `.bashrc` or `.bash_profile` files.
+
 ### Scripting
 
 Change directory to current script location:
