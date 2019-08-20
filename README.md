@@ -145,7 +145,12 @@ If you only want the style to apply to the terminal input line (where your usern
 `PS1="\e[41;4;33m\u@\h \w> \e[m"`
 
 You can also use `tput` to customize your PS1 variable:
+
 `PS1="\[$(tput bold)$(tput setab 4)$(tput setaf 2)\]\u@\h:\w $ \[$(tput sgr0)\]"`
+
+Explanation:
+* `\[` begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
+* `\]` end a sequence of non-printing character
 
 You can change the font formatting of a bash session by modifying the `PS1` environment variable, either for that session or permanently via the `.bashrc` or `.bash_profile` files.
 
