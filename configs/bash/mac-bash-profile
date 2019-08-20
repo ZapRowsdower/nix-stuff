@@ -1,5 +1,5 @@
 # Italicize and bold the shell input line
-export PS1="\e[3;1m\u@\h \w> \e[m"
+export PS1="\n\e[3;1;4m\u@\h \w\e[m> "
 
 # Enable color formatting for things like directories, symlinks, executables, etc
 export CLICOLORS=1
