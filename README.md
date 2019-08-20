@@ -136,7 +136,7 @@ You can customize 3 aspects of the prompt:
 
 The three values (background, format, and foreground) are separated by semicolons (if no value is given the default is assumed). Also, since the value ranges are different, it does not matter which one (background, format, or foreground) you specify first.
 
-Use the `\e[` special character at the beginning and an m at the end to indicate that what follows is a color sequence:
+Use the `\e[` escape character at the beginning and an `m` at the end to indicate that what is between the two is a color sequence:
 `PS1="\e[41;4;33m"` means set the background color to red, set the text format to underline, and set the foreground color to yellow.
 
 You can change the font formatting of a bash session by modifying the `PS1` environment variable, either for that session or permanently via the `.bashrc` or `.bash_profile` files.
