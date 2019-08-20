@@ -173,6 +173,9 @@ You can change the font formatting of a bash session by modifying the `PS1` envi
 Sweet guide on this here: 
 https://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie
 
+You can also change how the directories are formatted via the `LSCOLORS` environment variable. Useful tool to do that here:
+https://geoff.greer.fm/lscolors/
+
 ### Scripting
 
 Change directory to current script location:
