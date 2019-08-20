@@ -199,6 +199,13 @@ Then invoke the function and pass arguments like so:
 
 `$ helloworld hello world`
 
+### Environment Variables
+#### Paths
+[Mac OSX has a paths file which can be edited (seems easier than editing the PATH variable in `.bash_profile`)](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg)
+
+To edit this file:
+`$ sudo nano /etc/paths`
+
 ## General Concepts
 ### User Accounts
 By default, the root account is accessed by `sudo`. Use `sudo -i` to change your user type to the root admin. `su <user-name>` to switch back to non-root admin user type.
