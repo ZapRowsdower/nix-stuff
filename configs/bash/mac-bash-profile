@@ -1,0 +1,12 @@
+# Italicize and bold the shell input line
+export PS1="\e[3;1m\u@\h \w> \e[m"
+
+# Enable color formatting for things like directories, symlinks, executables, etc
+export CLICOLORS=1
+
+# Always highlight grep matches
+export GREP_OPTIONS='--color=always'
+
+# Convenient ls shortcut to show results in a list:
+# Use colors, add '/' to the end of directories, use human readable file size, and show hidden files
+alias ll='ls -lGFha'
