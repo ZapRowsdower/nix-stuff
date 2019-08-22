@@ -88,6 +88,7 @@ Learning unix/linux/posix stuff
 ## Shells
 On many *NIX OSes there is no GUI (for performance/size reasons) so your main interaction with the OS is via shells and scripts. *NIX systems have a variety of shells (for example: sh, zsh, ksh, and **bash**). See this [Wikipedia page for more details](https://en.wikipedia.org/wiki/Unix_shell). Bash appears to be the most ubiqutous shell to work with at this time as its available on Mac and PC (via Git Bash for Windows/Cygwin)
 
+### Shell Modes
 Shells have different modes: Interactive, Non-interactive, Login, Non-login.
 
 **Interactive**: As the term implies: Interactive means that the commands are run with user-interaction from keyboard. E.g. the shell can prompt the user to enter input.
@@ -100,6 +101,7 @@ Shells have different modes: Interactive, Non-interactive, Login, Non-login.
 
 **Login vs Non-login shells:**
 * https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell
+* http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
 * "Not a login shell" means things like script launches and usually terminal windows started by window managers.
 * "A login shell is one whose first character of argument zero is a -, or one started with the --login option."
 
@@ -178,16 +180,40 @@ https://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-lin
 You can also change how the directories are formatted via the `LSCOLORS` environment variable. Useful tool to do that here:
 https://geoff.greer.fm/lscolors/
 
-### Scripting
 
-Change directory to current script location:
+### Environment Variables
+Environment variables (such as PATH) can be defined in the `~/.bash_profile` and/or `~/.bashrc` files, depending on the OS in use (Linux, Unix, OSX).
 
-`cd "$(dirname "$0")"`
+Note that variables defined in `.bash_profile` are - by default - only accessible in login shells. To make these variables accessible to scripts run by other applications (e.g. VSCode tasks, Node.js scripts), you may have to pass the `-l` argument to your shell which puts the shell in login mode. 
+
+See the [**Shell Modes**](#shell%20modes) section for more details.
+
+Useful explanation of the difference between `.bash_profile` and `.bashrc`: http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+
+To ensure that you're always setting environment variables for any bash scenario (login/non-login), do the following:
+
+```bash
+# Put PATH and other common settings in ~/.bashrc
+# Add the following to your ~/.bash_profile:
+# If the .bashrc file exists...
+if [ -f ~/.bashrc ]; then
+   # Expose it's contents here.
+   # More info on 'source' here: https://superuser.com/a/46146
+   source ~/.bashrc
+fi
+```
 
 
 ### Bash Scripting
-http://mywiki.wooledge.org/BashFAQ
-http://mywiki.wooledge.org/BashPitfalls
+#### Helpful Links
+* http://mywiki.wooledge.org/BashFAQ
+* http://mywiki.wooledge.org/BashPitfalls
+
+#### Concepts/Snippets
+Change directory to current script location:
+```bash
+cd "$(dirname "$0")"
+```
 
 Create a function which accepts two parameters:
 ```bash
@@ -200,13 +226,6 @@ function helloworld() {
 Then invoke the function and pass arguments like so:
 
 `$ helloworld hello world`
-
-### Environment Variables
-#### Paths
-[Mac OSX has a paths file which can be edited (seems easier than editing the PATH variable in `.bash_profile`)](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg)
-
-To edit this file:
-`$ sudo nano /etc/paths`
 
 ## General Concepts
 ### User Accounts
