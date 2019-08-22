@@ -1,0 +1,6 @@
+#!/bin/bash
+VAR_IN_2="I'm from script-2"
+echo $VAR_IN_2
+# Attempt to read a variable declared in script-1
+# If we can't read that variable, we'll display "NO!" here:
+echo "Can we read vars in script 1?: "${READ_FROM_1:="NO!"}
