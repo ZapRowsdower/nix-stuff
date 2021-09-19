@@ -239,3 +239,5 @@ Then invoke the function and pass arguments like so:
 ## General Concepts
 ### User Accounts
 By default, the root account is accessed by `sudo`. Use `sudo -i` to change your user type to the root admin. `su <user-name>` to switch back to non-root admin user type.
+
+See a list of all the available users: `cat etc/passwd`
