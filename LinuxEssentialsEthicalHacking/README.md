@@ -9,5 +9,6 @@ Run
 $ ./scripts/startUbuntu.sh
 ```
 
-### Left off at 1;33;54
-https://youtu.be/1hvVcEhcbLM
+### Course Links
+https://youtu.be/1hvVcEhcbLM (Left off at 1:34)
+https://overthewire.org/wargames/bandit/bandit3.html
