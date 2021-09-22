@@ -2,7 +2,7 @@ FROM ubuntu
 
 # Install useful binaries
 RUN apt-get update 
-RUN apt-get -y install vim sudo
+RUN apt-get -y install vim sudo ssh
 
 # Add a default user, set bash as default shell, set password for user, add user to sudoers group
 # -m -> create user home directory
