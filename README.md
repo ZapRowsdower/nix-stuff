@@ -1,8 +1,6 @@
 # nix-stuff
 Learning unix/linux/posix stuff
 
-# Test
-
 ## Useful links
 * [LINUX BASICS IN 3 MINS : $PATH ENVIRONMENT VARIABLE](https://www.youtube.com/watch?v=abN6bvyPRxQ)
 * [22 Essential Linux Commands (su, PATH, PIPING, cat, ps, bg, jobs..)](https://www.youtube.com/watch?v=XOvlsrCv3Bk)
@@ -241,3 +239,81 @@ Then invoke the function and pass arguments like so:
 By default, the root account is accessed by `sudo`. Use `sudo -i` to change your user type to the root admin. `su <user-name>` to switch back to non-root admin user type.
 
 See a list of all the available users: `cat etc/passwd`
+
+### File Permissons
+Quick note: in Linux/Unix everything is a "file," including directories.
+
+Each file has 3 user based permission groups:
+- Owner: applies the creator of the file only
+- Group: applies only to the group assigned to the file only
+- All Other Users
+
+The permissions are broken up into 3 columns: Owner, Group, All Other Users. 
+
+To see permissions, run `ls -l`
+
+Owner, Group, All
+`-(rwx)(rwx)(rwx) owner group filesize date time filename`
+
+The `-` at the beginning can specifies the type of file. Commnly this will be `d` when the item is a directory. Another example is `c` for character file.
+
+
+**Example**
+```
+total 16
+drwxr-xr-x 1 learner learner   45 Sep 22 17:23 ./
+drwxr-xr-x 1 root    root      21 Sep 22 17:13 ../
+-rw-r--r-- 1 learner learner  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 learner learner 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 learner learner  807 Feb 25  2020 .profile
+-rw------- 1 learner learner  557 Sep 22 17:22 .viminfo
+drwxr-xr-x 2 root    root       6 Sep 22 17:13 Desktop/
+-rw-r--r-- 1 learner learner    0 Sep 22 17:23 permissions.txt
+```
+
+`d` stands for "directory"
+`r` stands for "read" access `4` in octal/binary mode
+`w` stands for "write" access `2` in octal/binary mode
+`x` stands for "execute" access. `1` in octal/binary mode
+
+To change permissions/access use `chmod`
+
+Group = `g`
+User = `u`
+All = `a`
+
+**Symbolic mode**
+
+Allow current user to read, write, execute a shell script file
+`chmod u=rwx script.sh`
+
+Allow group and all users to read, write, execute a script file
+`chmod ga=rwx script.sh`
+
+Remove write, exeecute permissions for all users
+`chmod ga-wx tesh.sh`
+
+**Octal/Binary Mode**
+
+Set read permissions for owner, group, and all others
+
+`chmod 444 test.sh`
+
+Set read, write, execute for owner only. Group and all others have read only access:
+- read = 4
+- write = 2
+- execute = 1
+
+4+2+1 = 7 (read + write + execute)
+
+`chmod 744`
+
+Grant read, write, execute recursively (to all contents) for all users:
+
+`chmod -R 777 ./SomeDir`
+
+### File Ownership
+
+`chown` changes file ownership.
+
+
