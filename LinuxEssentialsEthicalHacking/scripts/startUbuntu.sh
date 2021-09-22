@@ -1,5 +1,8 @@
 #!/bin/sh
 export CONTAINER_NAME=ubuntu-instance
+
+cd "$(dirname "$0")" &&
+cd .. &&
 # Build image from docker file. Tag the image as 'my-ubuntu'
 docker image build . -t my-ubuntu
 # Run the built image, name it
