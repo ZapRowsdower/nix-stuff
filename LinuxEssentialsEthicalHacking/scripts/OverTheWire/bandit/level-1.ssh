@@ -1,4 +1,5 @@
 # I must extract the password from a readme file and use it for another ssh call
+echo "Password is bandit0"
 ssh bandit0@bandit.labs.overthewire.org -p 2220 \
 cat readme > level-1-pword.txt &&
 echo "Done! The password is:";

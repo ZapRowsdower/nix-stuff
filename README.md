@@ -1,6 +1,8 @@
 # nix-stuff
 Learning unix/linux/posix stuff
 
+[Gitpod for this repo](https://gitpod.io#github.com/ZapRowsdower/nix-stuff)
+
 ## Useful links
 * [LINUX BASICS IN 3 MINS : $PATH ENVIRONMENT VARIABLE](https://www.youtube.com/watch?v=abN6bvyPRxQ)
 * [22 Essential Linux Commands (su, PATH, PIPING, cat, ps, bg, jobs..)](https://www.youtube.com/watch?v=XOvlsrCv3Bk)
@@ -331,6 +333,3 @@ To see which groups a given user is in:
 To change the group of a file to the root user:
 
 `chgrp root test.sh`
-
-## Grep
-
