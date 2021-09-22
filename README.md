@@ -312,8 +312,22 @@ Grant read, write, execute recursively (to all contents) for all users:
 
 `chmod -R 777 ./SomeDir`
 
-### File Ownership
+### File Ownership, Group
 
 `chown` changes file ownership.
 
+To change the ownership of a file to the root user:
 
+`chown root test.sh`
+
+To see a list of the current user's groups:
+
+`groups`
+
+To see which groups a given user is in:
+
+`groups username` 
+
+To change the group of a file to the root user:
+
+`chgrp root test.sh`
