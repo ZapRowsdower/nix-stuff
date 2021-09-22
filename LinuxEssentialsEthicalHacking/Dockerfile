@@ -2,7 +2,7 @@ FROM ubuntu
 
 # Install useful binaries
 RUN apt-get update 
-RUN apt-get -y install vim
+RUN apt-get -y install vim xclip sudo
 
 # Add a default user, set bash as default shell
 RUN useradd -ms /bin/bash learner
