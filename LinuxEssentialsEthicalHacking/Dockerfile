@@ -1,4 +1,6 @@
 FROM ubuntu
+# Add a default user
+RUN useradd -ms /bin/bash learner
 # Install useful binaries
-RUN apt update 
-RUN apt -y install vim nmap
+RUN apt-get update 
+RUN apt-get -y install vim

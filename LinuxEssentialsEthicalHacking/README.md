@@ -9,8 +9,5 @@ Run
 $ ./scripts/startUbuntu.sh
 ```
 
-
-https://youtu.be/1hvVcEhcbLM?t=1959
-
 ### Left off
 https://youtu.be/1hvVcEhcbLM?t=1959
