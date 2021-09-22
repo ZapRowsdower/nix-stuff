@@ -331,3 +331,6 @@ To see which groups a given user is in:
 To change the group of a file to the root user:
 
 `chgrp root test.sh`
+
+## Grep
+
