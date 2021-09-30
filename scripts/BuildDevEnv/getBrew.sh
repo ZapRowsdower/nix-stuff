@@ -1,6 +1,7 @@
-echo "Installing brew package manager in your ${HOME} directory. No sudo needed :-)"
+#!/bin/sh
+echo "Installing brew package manager in your ${HOME} directory. No sudo needed 😀"
 cd $HOME
-mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+mkdir $HOME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/homebrew
 
 eval "$(homebrew/bin/brew shellenv)"
 brew update --force --quiet

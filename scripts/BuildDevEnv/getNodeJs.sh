@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Getting Node.js with NPM"`
+echo "Getting Node.js with NPM"
 brew install node
