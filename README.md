@@ -4,6 +4,7 @@ Learning unix/linux/posix stuff
 [Gitpod for this repo](https://gitpod.io#github.com/ZapRowsdower/nix-stuff)
 
 ## Useful links
+* [Nice automated Linux environment setup](https://github.com/victoriadrake/dotfiles)
 * [LINUX BASICS IN 3 MINS : $PATH ENVIRONMENT VARIABLE](https://www.youtube.com/watch?v=abN6bvyPRxQ)
 * [22 Essential Linux Commands (su, PATH, PIPING, cat, ps, bg, jobs..)](https://www.youtube.com/watch?v=XOvlsrCv3Bk)
 * [UNIX: Basic UNIX commands you should know! Beginners guide. Part 1](https://www.youtube.com/watch?v=Cpxwo4atrEc)
