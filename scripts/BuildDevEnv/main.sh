@@ -25,4 +25,4 @@ source getMongosh.sh &&
 source getVsCode.sh &
 
 # Make sure any brew installed binaries get precedence over matching usr/bin versions
-# echo "export PATH=\"${HOME}/homebrew/bin/:$PATH\"" >> $HOME/.profile
+echo "export PATH=\"${HOME}/homebrew/bin/:$PATH\"" >> $HOME/.profile

@@ -8,7 +8,3 @@ export SSHPASS=$(cat ./level-1-pword.txt) &&
 sudo apt install -y sshpass && 
 # Now login to the next area and use the password from the file
 sshpass -f ./level-1-pword.txt ssh bandit1@bandit.labs.overthewire.org -p 2220
-
- 
-
-
