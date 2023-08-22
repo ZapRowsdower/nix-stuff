@@ -5,5 +5,5 @@ mkdir $HOME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master 
 
 eval "$(homebrew/bin/brew shellenv)"
 brew update --force --quiet
-# chmod -R go-w "$(brew --prefix)/share/zsh"
-"export PATH=\"${HOME}/homebrew/bin/:$PATH\"" >> $HOME/.profile
+chmod -R go-w "$(brew --prefix)/share/zsh"
+echo 'export PATH="$HOME/homebrew/bin/:$PATH"' >> $HOME/.profile
